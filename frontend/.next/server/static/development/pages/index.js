@@ -133,7 +133,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    mutation DELETE_ITEM_MUTATION($id: ID!) {\n        deleteItem(id: $id) {\n            id\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n  mutation DELETE_ITEM_MUTATION($id: ID!) {\n    deleteItem(id: $id) {\n      id\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -201,7 +201,7 @@ function (_Component) {
         update: this.update,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         },
         __self: this
       }, function (deleteItem, _ref) {
