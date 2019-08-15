@@ -59,7 +59,7 @@ export default class Reset extends Component {
               <fieldset disabled={loading} aria-busy={loading}>
                 <h2>Reset your password</h2>
                 <Error error={error} />
-
+                {!error && !loading && called && <p>Password reset success</p>}
                 <label htmlFor="password">
                   Password
                   <input

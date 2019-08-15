@@ -270,7 +270,13 @@ function (_Component) {
             lineNumber: 61
           },
           __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+        }), !error && !loading && called && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 62
+          },
+          __self: this
+        }, "Password reset success"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "password",
           __source: {
             fileName: _jsxFileName,
@@ -20660,7 +20666,7 @@ var ResetPage = function ResetPage(props) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/reset.js ***!
   \******************************/
@@ -20685,5 +20691,5 @@ module.exports = dll_18682c416555df0bf0b9;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=reset.js.map
