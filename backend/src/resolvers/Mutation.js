@@ -293,7 +293,6 @@ const Mutations = {
       },
       `{id, user {id}}`
     );
-    console.log(cartItem);
 
     if (!cartItem) throw new Error('No cart item found');
 
