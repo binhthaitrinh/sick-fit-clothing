@@ -332,6 +332,7 @@ const Mutations = {
             price 
             id 
             description 
+            largeImage
             image}}}`
     );
 
@@ -347,10 +348,38 @@ const Mutations = {
       currency: 'USD',
       source: args.token
     });
+
     // convert the CartItems to OrderItems
+    const orderItems = user.cart.map(cartItem => {
+      const orderItem = {
+        ...cartItem.item,
+        quantity: cartItem.quantity,
+        user: { connect: { id: userId } }
+      };
+      delete orderItem.id;
+      return orderItem;
+    });
+
     // Create order
+    const order = await ctx.db.mutation.createOrder({
+      data: {
+        total: charge.amount,
+        charge: charge.id,
+        items: { create: orderItems },
+        user: { connect: { id: userId } }
+      }
+    });
+
     // clean up - clear user cart, delete cartItems
+    const cartItemIds = user.cart.map(cartItem => cartItem.id);
+    await ctx.db.mutation.deleteManyCartItems({
+      where: {
+        id_in: cartItemIds
+      }
+    });
+
     // return order to client
+    return order;
   }
 };
 
