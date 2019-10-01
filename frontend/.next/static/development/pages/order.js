@@ -39094,7 +39094,7 @@ var OrderPage = function OrderPage(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/order.js ***!
   \******************************/
@@ -39119,5 +39119,5 @@ module.exports = dll_18682c416555df0bf0b9;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[4,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=order.js.map
